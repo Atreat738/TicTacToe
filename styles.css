@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.gameSquare {
+    border: 2px solid black;
+    font-size: 5rem;
+    padding: 50px;
+    height: 75px;
+    width: 50px;
+}

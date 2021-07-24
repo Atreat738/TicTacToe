@@ -1,0 +1,1 @@
+This is a tic tac toe game. I am creating it to practice module pattern and factory functions in javascript.
