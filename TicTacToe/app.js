@@ -1,11 +1,14 @@
 const game = (function() {
     const gameBoardContainer = document.querySelector('#gameBoardContainer');
     const gameSquares = document.querySelectorAll('.gameSquare');
+    const resetButton = document.querySelector('#ResetButton');
+    const playerXTitleDisplay = document.querySelector('#playerXh2');
+    const playerOTitleDisplay = document.querySelector('#playerOh2');
     
     let isGameOver = false;
     let gb = [];
     let resetGameBoard = () => { 
-        gb = ["","","",
+        return gb = ["","","",
             "","","",
             "","",""]; 
         };
@@ -14,7 +17,6 @@ const game = (function() {
     let updategb = (index, marker) => {
         return gb[index] = marker;
     };
-
 
 
     //for each square on the board
@@ -28,16 +30,22 @@ const game = (function() {
             if(gameSquare.textContent == '') {
                 if(playerX.isTurn == true) {
                     gameSquare.textContent = 'X';
+                    gameSquare.style.color = 'blue';
                     playerX.isTurn = false;
                     playerO.isTurn = true;
+                    playerOTitleDisplay.style.color = 'red';
+                    playerXTitleDisplay.style.color = 'black';
                     updategb(index, 'X');
                     checkWinner();
                     
 
                 } else if(playerO.isTurn == true) {
                     gameSquare.textContent = 'O';
+                    gameSquare.style.color = 'red';
                     playerO.isTurn = false;
                     playerX.isTurn = true;
+                    playerXTitleDisplay.style.color = 'blue';
+                    playerOTitleDisplay.style.color = 'black';
                     updategb(index, 'O');
                     checkWinner();
                 }
@@ -68,11 +76,16 @@ const game = (function() {
                 if ((gb[2] === gb[4]) && (gb[4] === gb[6]) && (gb[4] !== "")) {
                     return alert(`Player ${gb[4]} has won!`);
                 } 
-            }
+
                 //check for tie 
+                let tieCheckFilter = gb.filter(indexValue => indexValue != "");
+                if(tieCheckFilter.length > 8) {
+                    return alert('It\'s a Tie!');
+                }
+            }
             
         })
-    });
+    }); //end of the forEach gameSquares function
 
 
     //each player will have a marker: X or O
@@ -88,8 +101,10 @@ const game = (function() {
     const playerO = createPlayer('O', false);
 
 
-})();
+    resetButton.addEventListener('click', resetGameBoard);
 
+
+})();
 
 
 
