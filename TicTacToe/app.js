@@ -8,6 +8,9 @@ const game = (function() {
     let isGameOver = false;
     let gb = [];
     let resetGameBoard = () => { 
+        gameSquares.forEach((gameSquare) => {
+            gameSquare.textContent = "";
+        });
         return gb = ["","","",
             "","","",
             "","",""]; 
@@ -72,7 +75,6 @@ const game = (function() {
                 if ((gb[0] === gb[4]) && (gb[4] === gb[8] && gb[4] !== "")) {
                     return alert(`Player ${gb[4]} has won!`);
                 } 
-
                 if ((gb[2] === gb[4]) && (gb[4] === gb[6]) && (gb[4] !== "")) {
                     return alert(`Player ${gb[4]} has won!`);
                 } 
@@ -89,7 +91,7 @@ const game = (function() {
 
 
     //each player will have a marker: X or O
-    //will have a turn status(current/not)
+    //will have a turn status(true/false)
     function createPlayer(marker, isTurn) {
         return {
             marker: marker, 
@@ -105,8 +107,6 @@ const game = (function() {
 
 
 })();
-
-
 
 
 
