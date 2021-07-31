@@ -30,11 +30,42 @@ h1 {
     font-family: 'Pacifico', cursive;
 }
 
+/* Below will format the borders of the gamesquares into a tictactoe board */
+.hori-top {
+    border-bottom: 5px solid black;
+}
+
+.hori-low {
+    border-top: 5px solid black;
+}
+
+.vert-left {
+    border-right: 5px solid black;
+}
+
+.vert-right {
+    border-left: 5px solid black;
+}
+
 .gameSquare {
-    border: 2px solid black;
     font-size: 5rem;
     padding: 50px;
     height: 75px;
     width: 50px;
     font-family: 'Indie Flower', cursive;
 }
+
+#ResetButton {
+    font-size: 1.25rem;
+    margin-left: 25%;
+    margin-top: 2.5vh;
+    width: 50%;
+    background-color: #989556;
+    border: 2.5px solid #566298;
+    box-shadow: 10px 5px 5px #566298;
+}
+
+#ResetButton:hover {
+    cursor: pointer;
+}
+
