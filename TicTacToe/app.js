@@ -30,22 +30,22 @@ const game = (function() {
             if(gameSquare.textContent == '') {
                 if(playerX.isTurn == true) {
                     gameSquare.textContent = 'X';
-                    gameSquare.style.color = 'blue';
+                    gameSquare.style.color = '#0000cd'; //blue
                     playerX.isTurn = false;
                     playerO.isTurn = true;
-                    playerOTitleDisplay.style.color = 'red';
-                    playerXTitleDisplay.style.color = 'black';
+                    playerOTitleDisplay.style.color = '#8b0000'; //red
+                    playerXTitleDisplay.style.color = '#353839'; //black
                     updategb(index, 'X');
                     checkWinner();
                     
 
                 } else if(playerO.isTurn == true) {
                     gameSquare.textContent = 'O';
-                    gameSquare.style.color = 'red';
+                    gameSquare.style.color = '#8b0000'; //red
                     playerO.isTurn = false;
                     playerX.isTurn = true;
-                    playerXTitleDisplay.style.color = 'blue';
-                    playerOTitleDisplay.style.color = 'black';
+                    playerXTitleDisplay.style.color = '#0000cd'; //blue
+                    playerOTitleDisplay.style.color = '#353839'; //black
                     updategb(index, 'O');
                     checkWinner();
                 }

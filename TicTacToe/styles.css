@@ -4,25 +4,30 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #987456;
+    
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4.25rem;
+    font-family: 'Pacifico', cursive;
 }
 
 #playerXh2 { 
     position: absolute;
     top: 15vh;
     left: 20vh;
-    font-size: 2.5rem;
-    color: blue;
+    font-size: 2.75rem;
+    color: #0000cd;
+    font-family: 'Pacifico', cursive;
 }
 
 #playerOh2 {
     position: absolute;
     top: 15vh;
     right: 20vh;
-    font-size: 2.5rem;
+    font-size: 2.75rem;
+    font-family: 'Pacifico', cursive;
 }
 
 .gameSquare {
@@ -31,4 +36,5 @@ h1 {
     padding: 50px;
     height: 75px;
     width: 50px;
+    font-family: 'Indie Flower', cursive;
 }
