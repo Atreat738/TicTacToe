@@ -30,6 +30,29 @@ h1 {
     font-family: 'Pacifico', cursive;
 }
 
+@media (max-width: 900px) {
+    #playerXh2 {
+        top: 7.5vh;
+        left: 10vh;
+    }
+    #playerOh2 {
+        top: 7.5vh;
+        right: 10vh;
+    }
+    h1 {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    #playerXh2 {
+        left: 3vh;
+    }
+    #playerOh2 {
+        right: 3vh;
+    }
+}
+
 /* Below will format the borders of the gamesquares into a tictactoe board */
 .hori-top {
     border-bottom: 5px solid black;

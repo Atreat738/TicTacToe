@@ -1,4 +1,4 @@
-This is a tic tac toe desktop game.
+This is a tic tac toe game.
 The game is all set up and ready to start upon loading the page!
 
 Player X goes first, the color of the player name will change to indicate which player is up next. 
